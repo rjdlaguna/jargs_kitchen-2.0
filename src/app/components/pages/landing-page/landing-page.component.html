@@ -1,0 +1,152 @@
+<app-header></app-header>
+
+<!-- Hero -->
+<section id="hero" class="relative py-16 md:py-24 overflow-hidden bg-gradient-to-br from-[#2a1810] via-[#1a0f0a] to-black">
+
+
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <!-- Text Content -->
+      <div class="text-left">
+        <h1 class="font-bold text-5xl md:text-6xl lg:text-7xl leading-tight" style="font-family: 'Georgia', serif;">
+          <span class="text-white">Craving a</span><br/>
+          <span class="text-white">Juicy Burger?</span><br/>
+        </h1>
+
+        <p class="mt-6 text-gray-300 text-sm md:text-base max-w-md">
+          Welcome to <span class="font-semibold text-orange-400">Jarg's Kitchen</span> — handcrafted burgers, premium sides,
+          and a warm atmosphere for everyone.
+        </p>
+
+        <div class="mt-8 flex gap-4">
+          <a
+            routerLink="/menu"
+            class="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-orange-500 to-orange-600 px-8 py-3 text-sm md:text-base font-bold text-white shadow-2xl hover:scale-105 transform transition focus:outline-none focus:ring-4 focus:ring-orange-500/50"
+            aria-label="Order now"
+          >
+            Menu
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- Burger Image -->
+      <div class="relative">
+        <div class="relative z-10 rounded-3xl overflow-hidden shadow-2xl transform hover:scale-105 transition duration-500">
+          <img
+            src="/jargs-kitchen/src/app/components/shared/asset/burger_hero.jpg"
+            alt="Signature burger"
+            class="w-full h-96 object-cover"
+            loading="lazy"
+          />
+        </div>
+        <!-- Glow effect behind image -->
+        <div class="absolute inset-0 bg-gradient-to-br from-orange-500 to-yellow-400 rounded-3xl blur-3xl opacity-30 -z-10"></div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Visual + blurb -->
+<section class="py-16 md:py-24 bg-white relative overflow-hidden">
+
+
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <!-- Image with decorations -->
+      <div class="relative order-2 md:order-1">
+        <div class="rounded-3xl overflow-hidden shadow-2xl transform hover:rotate-1 transition duration-500 bg-gradient-to-br from-[#151617] to-[#0f1113] border border-white/5">
+          <img
+            src="/assets/hero-burger-dark.jpg"
+            alt="Signature burger on wooden board"
+            class="w-full h-72 object-cover"
+            loading="lazy"
+          />
+
+        </div>
+      </div>
+
+      <!-- Text Content -->
+      <div class="order-1 md:order-2 text-gray-900">
+        <h3 class="text-sm uppercase tracking-wider text-orange-500 font-semibold">What we do</h3>
+        <div class="mt-3 w-24 h-1 rounded-full bg-gradient-to-r from-orange-500 to-yellow-500"></div>
+
+        <p class="mt-6 text-base leading-relaxed text-gray-700">
+          We craft premium burgers using time-honored techniques and fresh ingredients. Our menu balances bold flavors
+          with approachable choices so everyone finds something to love.
+        </p>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="py-16 bg-gradient-to-b from-orange-50 to-white relative overflow-hidden">
+
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-gray-900" style="font-family: 'Georgia', serif;">About Jarg's Kitchen</h2>
+    <p class="mt-4 text-gray-700 max-w-3xl mx-auto leading-relaxed">
+      A neighborhood kitchen with a refined touch. We combine premium ingredients, careful technique, and warm hospitality
+      to create meals that feel special but never exclusive.
+    </p>
+
+    <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white border-2 border-orange-200 rounded-2xl p-6 text-left shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+
+        <h4 class="font-semibold text-orange-600 mb-2 text-lg">Quality Ingredients</h4>
+        <p class="text-gray-700 text-sm">Locally sourced produce and premium proteins for consistent flavor and texture.</p>
+      </div>
+
+      <div class="bg-white border-2 border-orange-200 rounded-2xl p-6 text-left shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+
+        <h4 class="font-semibold text-orange-600 mb-2 text-lg">Signature Sides</h4>
+        <p class="text-gray-700 text-sm">Golden fries, house sauces, and seasonal sides that elevate every meal.</p>
+      </div>
+
+      <div class="bg-white border-2 border-orange-200 rounded-2xl p-6 text-left shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+
+        <h4 class="font-semibold text-orange-600 mb-2 text-lg">Crafted with Care</h4>
+        <p class="text-gray-700 text-sm">Every dish is finished with attention to detail and served with a smile.</p>
+      </div>
+    </div>
+  </div>
+
+
+</section>
+
+<!-- Contact -->
+<section id="contact" class="py-16 bg-white overflow-hidden">
+
+
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl md:text-4xl font-bold text-black text-center mb-12" style="font-family: 'Georgia', serif;">Visit Us</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="p-8 rounded-2xl bg-gradient-to-br from-orange-500/20 to-orange-600/10 border-2 border-orange-500/30 text-center shadow-xl hover:scale-105 transform transition duration-300">
+        <div class="text-black-400 mb-4 text-5xl">📍</div>
+        <h4 class="font-semibold text-orange-300 mb-2 text-lg">Location</h4>
+        <p class="text-black-300 text-sm">123 Burger Street<br/>Food City, FC 12345</p>
+      </div>
+
+      <div class="p-8 rounded-2xl bg-gradient-to-br from-orange-500/20 to-orange-600/10 border-2 border-orange-500/30 text-center shadow-xl hover:scale-105 transform transition duration-300">
+        <div class="text-black-400 mb-4 text-5xl">⏰</div>
+        <h4 class="font-semibold text-orange-300 mb-2 text-lg">Hours</h4>
+        <p class="text-black-300 text-sm">Mon–Fri: 11am–10pm<br/>Sat–Sun: 10am–11pm</p>
+      </div>
+
+      <div class="p-8 rounded-2xl bg-gradient-to-br from-orange-500/20 to-orange-600/10 border-2 border-orange-500/30 text-center shadow-xl hover:scale-105 transform transition duration-300">
+        <div class="text-black-400 mb-4 text-5xl">📞</div>
+        <h4 class="font-semibold text-orange-300 mb-2 text-lg">Contact</h4>
+        <p class="text-black-300 text-sm">(555) 123-4567</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>

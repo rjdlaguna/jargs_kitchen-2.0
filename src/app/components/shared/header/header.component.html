@@ -1,0 +1,28 @@
+<header class="bg-gray-200 shadow-md sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+    <!-- Logo and title -->
+    <div class="flex items-center gap-3">
+      <div>
+        <h1 class="text-2xl font-bold text-black-600">Jargs Kitchen</h1>
+        <p class="text-xs text-gray-600">Premium Burgers & Fries</p>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="hidden md:flex gap-6">
+      <a routerLink="/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Dashboard</a>
+    </nav>
+
+    <!-- Cart button -->
+    <button 
+      (click)="toggleCart.emit()" routerLink="/menu"
+      class="relative bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 flex items-center gap-2 transition-colors">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+      </svg>
+      <span *ngIf="cartService.cartCount() > 0" class="absolute -top-2 -right-2 bg-yellow-400 text-red-900 rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold">
+        {{ cartService.cartCount() }}
+      </span>
+    </button>
+  </div>
+</header>

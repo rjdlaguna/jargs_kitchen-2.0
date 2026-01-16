@@ -1,0 +1,39 @@
+<app-header></app-header>
+<section id="menu" class="py-16 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center mb-4">Our Menu</h2>
+    <p class="text-center text-gray-600 mb-12">Choose your favorites</p>
+
+    <!-- Category Tabs -->
+    <div class="flex justify-center gap-4 mb-12">
+      <button 
+        (click)="selectedCategory.set('burger')"
+        [class.bg-red-600]="selectedCategory() === 'burger'"
+        [class.text-white]="selectedCategory() === 'burger'"
+        [class.bg-white]="selectedCategory() !== 'burger'"
+        [class.text-gray-700]="selectedCategory() !== 'burger'"
+        class="px-8 py-3 rounded-lg font-semibold shadow-md hover:shadow-lg transition-all">
+        🍔 Burgers
+      </button>
+      <button 
+        (click)="selectedCategory.set('fries')"
+        [class.bg-red-600]="selectedCategory() === 'fries'"
+        [class.text-white]="selectedCategory() === 'fries'"
+        [class.bg-white]="selectedCategory() !== 'fries'"
+        [class.text-gray-700]="selectedCategory() !== 'fries'"
+        class="px-8 py-3 rounded-lg font-semibold shadow-md hover:shadow-lg transition-all">
+        🍟 Fries
+      </button>
+    </div>
+
+    <!-- Menu Items Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      @for (item of filteredItems(); track item.id) {
+        <app-menu-item-card 
+          [item]="item"
+          (addToCart)="addToCart($event)">
+        </app-menu-item-card>
+      }
+    </div>
+  </div>
+</section>

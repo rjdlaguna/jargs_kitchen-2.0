@@ -3,13 +3,12 @@ import { CommonModule } from '@angular/common';
 import { MenuService } from '../../../services/menu.service';
 import { CartService } from '../../../services/cart.service';
 import { MenuItem } from '../../../models/menu-item.model';
-import { MenuItemCardComponent } from '../menu-item-card/menu-item-card.component';
-import { HeaderComponent } from "../../shared/header/header.component";
+
 
 @Component({
   selector: 'app-menu',
   standalone: true,
-  imports: [CommonModule, MenuItemCardComponent, HeaderComponent],
+  imports: [CommonModule],
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.css'
 })

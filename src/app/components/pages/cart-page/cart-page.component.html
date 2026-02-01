@@ -1,0 +1,53 @@
+<div class="min-h-screen bg-gray-50">
+  <!-- Header -->
+  <div class="bg-gray-900 text-white py-12 px-4">
+    <div class="max-w-4xl mx-auto">
+      <button
+        (click)="navigateTo('order')"
+        class="flex items-center gap-2 text-gray-400 hover:text-white transition-colors mb-4"
+      >
+        <!-- ArrowLeft SVG -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        <span>Back to Menu</span>
+      </button>
+      <h1 class="text-4xl md:text-5xl font-black font-serif">Your Cart</h1>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <ng-container *ngIf="cartItems.length === 0; else cartNotEmpty">
+      <!-- Empty Cart State -->
+      <div class="text-center py-20">
+        <div class="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-6">
+          <!-- ShoppingBag SVG -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14l-1.5 12h-11L5 8z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8V6a5 5 0 0110 0v2" />
+          </svg>
+        </div>
+        <h2 class="text-2xl font-bold text-gray-900 mb-2">Your cart is empty</h2>
+        <p class="text-gray-500 mb-8">Looks like you haven't added any items yet.</p>
+        <button
+          (click)="navigateTo('order')"
+          class="bg-amber-500 hover:bg-amber-600 text-white font-bold px-6 py-3 rounded-xl"
+        >
+          Browse Menu
+        </button>
+      </div>
+    </ng-container>
+
+    <ng-template #cartNotEmpty>
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Cart Items -->
+        <div class="lg:col-span-2 space-y-4">
+          <div *ngFor="let item of cartItems" class="bg-white rounded-2xl p-4 shadow-sm flex gap-4 items-center">
+            <!-- Item Image -->
+            <div class="w-24 h-24 rounded-xl overflow-hidden flex-shrink-0">
+              <img [src]="item.image" [alt]="item.name" class="w-full h-full object-cover" />
+            </div>
+
+            <!-- Item Details -->
+            <div class="flex-grow min-w-0">
+              <h3 class="font-bold text-gray-900 text-lg truncate">{{ item.name }}</h3>

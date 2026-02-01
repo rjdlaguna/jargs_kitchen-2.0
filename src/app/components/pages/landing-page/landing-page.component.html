@@ -1,161 +1,177 @@
-
-<!-- Hero -->
-<section id="hero" class="relative h-screen flex items-center justify-center md:py-10 overflow-hidden">
-
-  
-    <!-- Clipped path-->
-    <!-- Background Image Cover -->
+<!-- HERO SECTION -->
+<section
+  id="hero"
+  class="relative h-screen flex items-center justify-center overflow-hidden md:py-10"
+>
+  <!-- Background Image -->
   <div class="absolute inset-0">
     <img
       src="images/heroBurger.jpg"
-      alt="Background"
+      alt="Juicy burger background"
       class="w-full h-full object-cover opacity-20"
     />
   </div>
 
-  <div class="absolute top-0 right-0 w-full h-full bg-amber-600 [clip-path:polygon(60%_0,_90%_0,_80%_100%,_40%_100%)]"></div>
+  <!-- Clipped Accent Shape -->
+  <div
+    class="absolute top-0 right-0 w-full h-full bg-amber-600
+           [clip-path:polygon(60%_0,_90%_0,_80%_100%,_40%_100%)]"
+  ></div>
 
-    <div class="w-full h-full relative z-10 max-w-7xl mx-auto px-6">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        
-        <!-- Text Content -->
-        <div class="text-left space-y-8">
-          <h1 class="font-black text-5xl md:text-6xl lg:text-7xl  font-serif text-black-300 ">
-            <span>Crave the</span><br/>
-            <span>Ultimate</span><br/>
-            <span>Juicy Burger?</span>
-          </h1>
+  <div class="relative z-10 w-full max-w-7xl mx-auto px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
-          <p class="text-xl md:text-2xl text-white max-w-lg leading-relaxed">
-            Taste <span class="font-black text-orange-500 italic">One of the Best</span> handcrafted burgers here at Mabalacat City, Pampanga
-          </p>
-          <div class="flex flex-col sm:flex-row gap-4">
-            <button class="bg-amber-500 text-white font-semibold px-8 py-4 rounded-2xl text-lg shadow-2xl hover:shadow-orange-500/25 hover:scale-105 transition-all duration-300 transform">
-              Order Now
-            </button>
+      <!-- TEXT CONTENT -->
+      <div class="space-y-8 text-left">
+        <h1
+          class="font-black font-serif text-5xl md:text-6xl lg:text-7xl text-white leading-tight"
+        >
+          <span class="block">Crave the</span>
+          <span class="block">Ultimate</span>
+          <span class="block">Juicy Burger?</span>
+        </h1>
 
-          </div>  
-        </div>
+        <p class="text-xl md:text-2xl text-white max-w-lg leading-relaxed">
+          Taste
+          <span class="font-black text-orange-500 italic">
+            one of the best
+          </span>
+          handcrafted burgers here at Mabalacat City, Pampanga.
+        </p>
 
-        <!-- Burger Image -->
-        <div class="relative z-10">
-          <img
-            src="images/burger2.png"
-            alt="Signature burger"
-            class="w-full h-[900px] object-cover"
-          />
-        </div>
-        
-      </div>
-    </div>
-</section>
-
-<!-- Featured Section - Beast Burger (Full Width) -->
-<section class="px-4 border-t-2 border-black sm:px-6 lg:px-8 xl:px-0 bg-neutral-100">
-  <div class="w-full max-w-none">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-0 -ml-4 lg:-ml-0 -mr-4 lg:-mr-0 h-[700px] lg:h-[600px]">
-      
-
-      <!-- Left  Column -->
-      <div class="relative col-span-1 lg:col-span-1 overflow-hidden rounded-l-3xl lg:rounded-l-none h-full">
-        <div class="absolute inset-0">
-          <img
-            src="images/burger.jpg"
-            alt="Beast Burger - juicy double patty with cheese"
-            class="w-full h-full object-cover"
-          />
-        </div>
-      </div>
-
-
-            <!-- right column -->
-      <div class="bg-red-700 text-white relative overflow-hidden group col-span-1 lg:col-span-1 pr-0 lg:pr-20">
-        <div class = "m-10 ">
-          <h2 class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black font-serif leading-tight z-10 relative">
-            <span>Best Seller!</span><br/>
-            <span class="text-3xl md:text-4xl lg:text-5xl">Jarg's Double Patty Burger</span>
-          </h2>
-          
-          <p class="mt-12 text-xl md:text-2xl text-purple-100 leading-relaxed max-w-lg font-light">
-            Grilled and made with love! <span class="font-bold">Every day.</span>
-          </p>
-          
-         
-        
-        
-        <!-- CTA Button -->
-        <div class="mt-12">
-          <button class="bg-red-500 hover:bg-red-600 text-white font-bold px-12 py-6 rounded-full text-xl shadow-2xl hover:shadow-red-500/25 hover:scale-105 transition-all duration-300 transform inline-flex items-center">
-            View All Menu
+        <div class="flex flex-col sm:flex-row gap-4">
+          <button
+            class="bg-amber-500 text-white font-semibold px-8 py-4 rounded-2xl
+                   text-lg shadow-2xl hover:shadow-orange-500/25 hover:scale-105
+                   transition-all duration-300"
+          >
+            Order Now
           </button>
         </div>
-        </div>
       </div>
-      
+
+      <!-- HERO IMAGE -->
+      <div class="relative z-10">
+        <img
+          src="images/burger2.png"
+          alt="Signature burger"
+          class="w-full h-[900px] object-cover"
+        />
+      </div>
+
     </div>
   </div>
 </section>
 
-<!--divider-->
-<div class="bg-gray-900 py-24 sm:py-32">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <dl class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
-      <div class="mx-auto flex max-w-xs flex-col gap-y-4">
-        <dd class="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl">Tasty & Juicy</dd>
+<!-- FEATURED BURGER SECTION -->
+<section class="bg-neutral-100 border-t-2 border-black px-4 sm:px-6 lg:px-8 xl:px-0">
+  <div class="w-full">
+    <div
+      class="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-0
+             -ml-4 lg:ml-0 -mr-4 lg:mr-0 h-[700px] lg:h-[600px]"
+    >
+
+      <!-- IMAGE COLUMN -->
+      <div class="relative overflow-hidden h-full">
+        <img
+          src="images/burger.jpg"
+          alt="Jarg's Double Patty Burger"
+          class="absolute inset-0 w-full h-full object-cover"
+        />
       </div>
-      <div class="mx-auto flex max-w-xs flex-col gap-y-4">
-        <dd class="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl">Mabalacat's #1 burger spot</dd>
+
+      <!-- TEXT COLUMN -->
+      <div class="bg-red-700 text-white flex items-center">
+        <div class="m-10 space-y-10">
+          <h2
+            class="font-black font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight"
+          >
+            <span class="block">Best Seller!</span>
+            <span class="block text-3xl md:text-4xl lg:text-5xl">
+              Jarg's Double Patty Burger
+            </span>
+          </h2>
+
+          <p class="text-xl md:text-2xl text-purple-100 max-w-lg">
+            Grilled and made with love.
+            <span class="font-bold">Every day.</span>
+          </p>
+
+          <button
+            class="bg-red-500 hover:bg-red-600 text-white font-bold px-12 py-6
+                   rounded-full text-xl shadow-2xl hover:shadow-red-500/25
+                   hover:scale-105 transition-all duration-300"
+          >
+            View All Menu
+          </button>
+        </div>
       </div>
-      <div class="mx-auto flex max-w-xs flex-col gap-y-4">
-        <dd class="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl">Affordable</dd>
-      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- DIVIDER -->
+<section class="bg-gray-900 py-24 sm:py-32">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <dl class="grid grid-cols-1 lg:grid-cols-3 gap-y-16 text-center">
+      <dd class="text-3xl sm:text-5xl font-semibold text-white">
+        Tasty & Juicy
+      </dd>
+      <dd class="text-3xl sm:text-5xl font-semibold text-white">
+        Mabalacat’s #1 Burger Spot
+      </dd>
+      <dd class="text-3xl sm:text-5xl font-semibold text-white">
+        Affordable
+      </dd>
     </dl>
   </div>
-</div>
+</section>
 
+<!-- SECOND FEATURE SECTION (REVERSED) -->
+<section class="bg-neutral-100 border-t-2 border-black px-4 sm:px-6 lg:px-8 xl:px-0">
+  <div class="w-full">
+    <div
+      class="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-0
+             -ml-4 lg:ml-0 -mr-4 lg:mr-0 h-[700px] lg:h-[600px]"
+    >
 
-<section class="px-4 border-t-2 border-black sm:px-6 lg:px-8 xl:px-0 bg-neutral-100">
-  <div class="w-full max-w-none">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-0 -ml-4 lg:-ml-0 -mr-4 lg:-mr-0 h-[700px] lg:h-[600px]">
-      
-            <!-- right column -->
-      <div class="bg-amber-600 text-white relative overflow-hidden group col-span-1 lg:col-span-1 pr-0 lg:pr-20">
-        <div class = "m-10 ">
-          <h2 class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black font-serif leading-tight z-10 relative">
-            <span>Best Seller!</span><br/>
-            <span class="text-3xl md:text-4xl lg:text-5xl">Jarg's Double Patty Burger</span>
+      <!-- TEXT COLUMN -->
+      <div class="bg-amber-600 text-white flex items-center">
+        <div class="m-10 space-y-10">
+          <h2
+            class="font-black font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight"
+          >
+            <span class="block">Best Seller!</span>
+            <span class="block text-3xl md:text-4xl lg:text-5xl">
+              Jarg's Double Patty Burger
+            </span>
           </h2>
-          
-          <p class="mt-12 text-xl md:text-2xl text-purple-100 leading-relaxed max-w-lg font-light">
-            Grilled and made with love! <span class="font-bold">Every day.</span>
+
+          <p class="text-xl md:text-2xl text-purple-100 max-w-lg">
+            Grilled and made with love.
+            <span class="font-bold">Every day.</span>
           </p>
-          
-         
-        
-        
-        <!-- CTA Button -->
-        <div class="mt-12">
-          <button class="bg-red-500 hover:bg-red-600 text-white font-bold px-12 py-6 rounded-full text-xl shadow-2xl hover:shadow-red-500/25 hover:scale-105 transition-all duration-300 transform inline-flex items-center">
+
+          <button
+            class="bg-red-500 hover:bg-red-600 text-white font-bold px-12 py-6
+                   rounded-full text-xl shadow-2xl hover:shadow-red-500/25
+                   hover:scale-105 transition-all duration-300"
+          >
             View All Menu
           </button>
         </div>
-        </div>
       </div>
-      
-       <!-- Left  Column -->
-      <div class="relative col-span-1 lg:col-span-1 overflow-hidden rounded-l-3xl lg:rounded-l-none h-full">
-        <div class="absolute inset-0">
-          <img
-            src="images/burger3.jpg"
-            alt="Beast Burger - juicy double patty with cheese"
-            class="w-full h-full object-cover"
-          />
-        </div>
+
+      <!-- IMAGE COLUMN -->
+      <div class="relative overflow-hidden h-full">
+        <img
+          src="images/burger3.jpg"
+          alt="Burger close-up"
+          class="absolute inset-0 w-full h-full object-cover"
+        />
       </div>
 
     </div>
   </div>
 </section>
-
-
-

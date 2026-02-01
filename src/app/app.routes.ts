@@ -22,6 +22,12 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./components/pages/menu/menu.component').then(m => m.MenuComponent),
   },
+  {
+    path: 'cart',
+    loadComponent: () =>
+      import('./components/pages/cart-page/cart-page.component').then(m => m.CartComponent),
+  },
+
 
 
 ];

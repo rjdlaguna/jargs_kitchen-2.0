@@ -1,4 +1,6 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { RouterLink, RouterModule} from "@angular/router";
 
 export interface CartItem {
   id: number;
@@ -10,6 +12,8 @@ export interface CartItem {
 
 @Component({
   selector: 'cart-page',
+  standalone: true,
+  imports: [CommonModule, RouterLink, RouterModule],
   templateUrl: './cart-page.component.html',
   styleUrls: ['./cart-page.component.css'],
   })

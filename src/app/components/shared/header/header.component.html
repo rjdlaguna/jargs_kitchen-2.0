@@ -1,26 +1,69 @@
+<nav class="absolute top-0 left-0 w-full h-20 bg-black flex justify-between p-5 items-center z-50 sticky top-0">
+  <div class="mr-5 flex items-center"> <img src="images/jargs.jpg" alt="Jarg's Logo" class="h-12 w-auto object-contain" /> </div>
 
-    <nav class="border-b absolute top-0 left-0  w-full h-20 bg-black flex justify-between p-5 items-center z-50 sticky top-0 z-50">
-        <div class="mr-5">
-           <h1 class="text-xl md:text-3xl text-white font-semibold">Jargs Kitchen</h1>
-        </div>
+  <div class="hidden lg:flex gap-20 justify-between items-center">
+  <ul class="flex gap-6 bg-gray-900 rounded-full shadow-md">
+  <li 
+    routerLink="" 
+    routerLinkActive="text-amber-500 rounded-full" 
+    [routerLinkActiveOptions]="{ exact: true }"
+    class="text-sm font-semibold text-white cursor-pointer transition">
+    Home
+  </li>
+  <li 
+    routerLink="menu" 
+    routerLinkActive="text-amber-500 rounded-full" 
+    class="text-sm font-semibold text-white cursor-pointer transition">
+    Order
+  </li>
+  <li 
+    routerLink="about" 
+    routerLinkActive="text-amber-500 rounded-full" 
+    class="text-sm font-semibold text-white cursor-pointer transition">
+    About
+  </li>
+  <li 
+    routerLink="contact" 
+    routerLinkActive="text-amber-500 rounded-full" 
+    class="text-sm font-semibold text-white cursor-pointer transition">
+    Contact
+  </li>
+</ul>
 
-        <div class="hidden lg:flex gap-20 justify-between items-center">
-            <ul class="flex gap-8">
-                <li routerLink="" class="text-sm font-semibold text-white cursor-pointer">Home</li>
-                <li routerLink="menu" class="text-sm font-semibold text-white cursor-pointer">Order</li>
-                 <li routerLink="about" class="text-sm font-semibold text-white cursor-pointer">About</li>
-                 <li routerLink="contact" class="text-sm font-semibold text-white cursor-pointer">Contact</li>
-                 
-            
-            </ul>
-        </div>
-        <div class="hidden lg:flex flex gap-5">
-            <button
-               routerLink="cart" class="border border-orange-500 text-sm text-black hover:bg-red-600 px-5 py-2 font-semibold rounded-lg cursor-pointer">Cart</button>
 
-            <button
-                class="border border-orange-500 text-sm text-black hover:bg-red-600 px-5 py-2 font-semibold rounded-lg cursor-pointer">Login</button>
-            <button
-                class="border border-white text-sm text-black px-5 py-2 font-semibold rounded-lg cursor-pointer hover:opacity-80">SignUp</button>
-        </div>
-    </nav>
+
+
+
+
+  </div>
+
+  <div class="hidden lg:flex gap-5">
+    <a
+      routerLink="cart"
+      routerLinkActive="bg-red-600 text-white"
+      class=" text-sm text-white hover:bg-red-600 px-5 py-2 font-semibold rounded-lg cursor-pointer transition">
+      <svg width="30px" height="24px" viewBox="0 0 24 24" 
+     xmlns="http://www.w3.org/2000/svg" fill="white">
+  <circle cx="16.5" cy="18.5" r="1.5"/>
+  <circle cx="9.5" cy="18.5" r="1.5"/>
+  <path d="M18 16H8a1 1 0 0 1-.958-.713L4.256 6H3a1 1 0 0 1 0-2h2a1 1 0 0 1 .958.713L6.344 6H21a1 1 0 0 1 .937 1.352l-3 8A1 1 0 0 1 18 16zm-9.256-2h8.563l2.25-6H6.944z"/>
+</svg>
+
+
+  </a>
+
+    <button
+      routerLink="login"
+      routerLinkActive="bg-red-600 text-white"
+      class="border border-orange-500 text-sm text-white hover:bg-red-600 px-5 py-2 font-semibold rounded-lg cursor-pointer transition">
+      Login
+    </button>
+
+    <button
+      routerLink="signup"
+      routerLinkActive="opacity-80"
+      class="border border-white text-sm text-white px-5 py-2 font-semibold rounded-lg cursor-pointer hover:opacity-80 transition">
+      SignUp
+    </button>
+  </div>
+</nav>

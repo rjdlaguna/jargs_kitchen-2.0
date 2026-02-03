@@ -1,0 +1,131 @@
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+
+added 957 packages, and audited 958 packages in 9s
+
+171 packages are looking for funding
+  run `npm fund` for details
+
+4 vulnerabilities (1 moderate, 3 high)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+> jargs-kitchen@0.0.0 build
+> ng build
+
+❯ Building...
+/*! 🌼 daisyUI 5.5.14 */
+✔ Building...
+Initial chunk files   | Names                  |  Raw size | Estimated transfer size
+main-Y4JO42SY.js      | main                   | 171.79 kB |                43.88 kB
+chunk-AJDXOWWP.js     | -                      | 128.42 kB |                37.96 kB
+styles-3BD6UU5J.css   | styles                 |  48.34 kB |                 8.23 kB
+polyfills-B6TNHZQ6.js | polyfills              |  34.58 kB |                11.32 kB
+chunk-GKLGN22X.js     | -                      |  10.08 kB |                 2.87 kB
+
+                      | Initial total          | 393.21 kB |               104.26 kB
+
+Lazy chunk files      | Names                  |  Raw size | Estimated transfer size
+chunk-3LFFXXUK.js     | contact-component      |  37.52 kB |                 8.62 kB
+chunk-MJIVXCGJ.js     | -                      |   5.84 kB |                 2.21 kB
+chunk-O6N47BJ5.js     | menu-component         |   5.71 kB |                 2.15 kB
+chunk-JNBRKLVB.js     | about-component        |   5.29 kB |                 1.99 kB
+chunk-IFQ2A7R6.js     | landing-page-component |   3.99 kB |                 1.31 kB
+chunk-62YKBRSU.js     | cart-page-component    |   3.54 kB |                 1.44 kB
+
+Application bundle generation complete. [5.489 seconds]
+
+▲ [WARNING] NG8103: The `*ngIf` directive was used in the template, but neither the `NgIf` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @if or make sure that either the `NgIf` directive or the `CommonModule` is included in the `@Component.imports` array of this component. [plugin angular-compiler]
+
+    src/app/components/pages/cart-page/cart-page.component.html:20:19:
+      20 │     <ng-container *ngIf="cartItems.length === 0; else cartNotEmpty">
+         ╵                    ~~~~
+
+  Error occurs in the template of component CartComponent.
+
+    src/app/components/pages/cart-page/cart-page.component.ts:13:15:
+      13 │   templateUrl: './cart-page.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+▲ [WARNING] NG8103: The `*ngFor` directive was used in the template, but neither the `NgFor` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @for or make sure that either the `NgFor` directive or the `CommonModule` is included in the `@Component.imports` array of this component. [plugin angular-compiler]
+
+    src/app/components/pages/cart-page/cart-page.component.html:45:16:
+      45 │           <div *ngFor="let item of cartItems" class="bg-white roun...
+         ╵                 ~~~~~
+
+  Error occurs in the template of component CartComponent.
+
+    src/app/components/pages/cart-page/cart-page.component.ts:13:15:
+      13 │   templateUrl: './cart-page.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+▲ [WARNING] 57 rules skipped due to selector errors:
+  & -> Empty sub-selector
+  & -> Empty sub-selector
+  & -> Empty sub-selector
+  &.menu-focus -> Empty sub-selector
+  & -> Empty sub-selector
+  & -> Empty sub-selector
+  &.menu-disabled -> Empty sub-selector
+  & -> Empty sub-selector
+  & -> Empty sub-selector
+  &.list-row -> Empty sub-selector
+  & -> Empty sub-selector
+  & -> Empty sub-selector
+  & -> Empty sub-selector
+  & -> Empty sub-selector
+  & -> Empty sub-selector
+  & -> Empty sub-selector
+  & -> Empty sub-selector
+  & -> Empty sub-selector
+  & -> Empty sub-selector
+  & -> Empty sub-selector
+  & -> Empty sub-selector
+  & -> Empty sub-selector
+  & -> Empty sub-selector
+  & -> Empty sub-selector
+  & -> Empty sub-selector
+  & -> Empty sub-selector
+  fieldset & -> Unmatched selector: &
+  &>input[disabled] -> Empty sub-selector
+  & -> Empty sub-selector
+  & -> Empty sub-selector
+  &[type=number] -> Empty sub-selector
+  & -> Empty sub-selector
+  & -> Empty sub-selector
+  &.footer-center -> Empty sub-selector
+  &.footer-center -> Empty sub-selector
+  & -> Empty sub-selector
+  & -> Empty sub-selector
+  & -> Empty sub-selector
+  & -> Empty sub-selector
+  & -> Empty sub-selector
+  & -> Empty sub-selector
+  & -> Empty sub-selector
+  & -> Empty sub-selector
+  & -> Empty sub-selector
+  & -> Empty sub-selector
+  & -> Empty sub-selector
+  & -> Empty sub-selector
+  & -> Empty sub-selector
+  & -> Empty sub-selector
+  & -> Empty sub-selector
+  & -> Empty sub-selector
+  & -> Empty sub-selector
+  & -> Empty sub-selector
+  & -> Empty sub-selector
+  & -> Empty sub-selector
+  & -> Empty sub-selector
+  & -> Empty sub-selector
+
+
+Output location: /home/u786813176/domains/jargskitchen.shop/public_html/.builds/source/repository/dist/jargs-kitchen

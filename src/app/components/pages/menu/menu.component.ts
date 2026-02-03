@@ -7,7 +7,7 @@ import {
   ShoppingCart, 
 } from 'lucide-angular'
 
-type Category = 'Burgers' | 'Sides' | 'Drinks' | 'Combos'
+type Category = 'Burgers' | 'Sides' | 'Chicken'
 
 interface MenuItem {
   id: number
@@ -33,85 +33,98 @@ export class MenuComponent {
   Minus = Minus
   ShoppingCart = ShoppingCart
 
-  categories: Category[] = ['Burgers', 'Sides', 'Drinks', 'Combos']
+  categories: Category[] = ['Burgers', 'Sides', 'Chicken']
   activeCategory: Category = 'Burgers'
   cartCount = 0
 
   MENU_ITEMS: MenuItem[] = [
     {
       id: 1,
-      name: "Jarg's Classic",
+      name: "Jarg's Super Deluxe",
+      description: 'Single patty, cheddar, lettuce, tomato, house sauce',
+      price: 8.99,
+      category: 'Sides',
+      image:
+        'images/menu1.jpg',
+      popular: true,
+    },
+    {
+      id: 1,
+      name: "Jarg's Super Deluxe",
+      description: 'Single patty, cheddar, lettuce, tomato, house sauce',
+      price: 8.99,
+      category: 'Sides',
+      image:
+        'images/menu2.jpg',
+      popular: true,
+    },
+    {
+      id: 1,
+      name: "Jarg's Super Deluxe",
       description: 'Single patty, cheddar, lettuce, tomato, house sauce',
       price: 8.99,
       category: 'Burgers',
       image:
-        'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&q=80',
+        'images/menu3.jpg',
+      popular: true,
+    },
+    {
+      id: 1,
+      name: "Jarg's Deluxe",
+      description: 'Single patty, cheddar, lettuce, tomato, house sauce',
+      price: 8.99,
+      category: 'Burgers',
+      image:
+        'images/menu4.jpg',
       popular: true,
     },
     {
       id: 2,
-      name: 'Double Beast',
+      name: "Jarg's Double",
       description: 'Double patty, double cheese, bacon, caramelized onions',
       price: 12.99,
       category: 'Burgers',
       image:
-        'https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=800&q=80',
+        'images/menu5.jpg',
       popular: true,
     },
     {
       id: 3,
-      name: 'Spicy Inferno',
+      name: "Jarg's Supreme",
       description: 'Crispy chicken, jalapeños, spicy mayo, pepper jack',
       price: 10.99,
       category: 'Burgers',
       image:
-        'https://images.unsplash.com/photo-1615557960916-5f4791effe9d?w=800&q=80',
+        'images/menu6.jpg',
     },
     {
       id: 4,
-      name: 'Mushroom Swiss',
+      name: "Jarg's Cheese Burger",
       description: 'Sautéed mushrooms, swiss cheese, truffle mayo',
       price: 11.99,
       category: 'Burgers',
       image:
-        'https://images.unsplash.com/photo-1550547660-d9450f859349?w=800&q=80',
+        'images/menu7.jpg',
     },
     {
       id: 5,
-      name: 'Crispy Fries',
+      name: "Jarg's Chicken",
       description: 'Golden shoestring fries with sea salt',
       price: 3.99,
-      category: 'Sides',
+      category: 'Chicken',
       image:
-        'https://images.unsplash.com/photo-1573080496987-a199f8cd75ec?w=800&q=80',
+        'images/menu8.jpg',
     },
     {
       id: 6,
-      name: 'Onion Rings',
+      name: "Jarg's Whole Chicken",
       description: 'Beer-battered thick cut onion rings',
       price: 4.99,
-      category: 'Sides',
+      category: 'Chicken',
       image:
-        'https://images.unsplash.com/photo-1639024471283-03518883512d?w=800&q=80',
-    },
-    {
-      id: 7,
-      name: 'Vanilla Shake',
-      description: 'Hand-spun vanilla bean milkshake',
-      price: 5.99,
-      category: 'Drinks',
-      image:
-        'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=800&q=80',
-    },
-    {
-      id: 8,
-      name: 'Craft Cola',
-      description: 'Artisanal cola with cane sugar',
-      price: 2.99,
-      category: 'Drinks',
-      image:
-        'https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=800&q=80',
-    },
+        'images/menu9.jpg',
+    }
+    
   ]
 
   get filteredItems(): MenuItem[] {

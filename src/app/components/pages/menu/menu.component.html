@@ -1,92 +1,71 @@
 <div class="min-h-screen bg-gray-50 pb-20">
+  <div class="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
 
-  <!-- HEADER -->
-  <div class="bg-gray-900 text-white py-12 px-4 text-center">
-    <h1 class="text-4xl md:text-5xl font-black font-serif mb-4">
-      Our Menu
-    </h1>
-    <p class="text-gray-400 max-w-2xl mx-auto">
-      Handcrafted with love and the finest ingredients.
-    </p>
-  </div>
-
-  <!-- CATEGORY TABS -->
-  <div class="sticky top-20 z-30 bg-white shadow-md">
-    <div class="max-w-7xl mx-auto px-4 overflow-x-auto">
-      <div class="flex space-x-8 py-4 min-w-max justify-center md:justify-start">
+    <!-- CATEGORY SIDEBAR -->
+    <aside class="md:col-span-1 bg-white text-black rounded-xl shadow p-6 sticky top-24 h-fit">
+      <h2 class="text-lg font-semibold mb-4">Categories</h2>
+      <div class="flex md:flex-col space-x-4 md:space-x-0 md:space-y-3 overflow-x-auto md:overflow-visible">
         <button
           *ngFor="let category of categories"
           (click)="setCategory(category)"
-          class="text-lg font-bold px-4 py-2 rounded-full transition-all"
+          class="text-base font-medium px-4 py-2 rounded-full transition-colors duration-200 w-full text-center"
           [ngClass]="{
-            'bg-amber-500 text-white shadow-lg scale-105': activeCategory === category,
-            'text-gray-500 hover:text-gray-900 hover:bg-gray-100': activeCategory !== category
+            'bg-amber-500 text-white shadow': activeCategory === category,
+            'text-gray-600 hover:text-gray-900 hover:bg-gray-100': activeCategory !== category
           }"
         >
           {{ category }}
         </button>
       </div>
-    </div>
-  </div>
+    </aside>
 
-  <!-- MENU GRID -->
-  <div class="max-w-7xl mx-auto px-4 py-12">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-      <div
-        *ngFor="let item of filteredItems"
-        class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition group"
-      >
-        <div class="relative h-64 overflow-hidden">
-          <img
-            [src]="item.image"
-            [alt]="item.name"
-            class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
-          />
-
-          <div
-            *ngIf="item.popular"
-            class="absolute top-4 right-4 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase"
-          >
-            Popular
-          </div>
-        </div>
-
-        <div class="p-6">
-          <div class="flex justify-between items-start mb-2">
-            <h3 class="text-xl font-bold">
-              {{ item.name }}
-            </h3>
-            <span class="text-xl font-black text-amber-600">
-              ${{ item.price }}
-            </span>
+    <!-- MENU GRID -->
+    <main class="md:col-span-3">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+        <div
+          *ngFor="let item of filteredItems"
+          class="bg-white rounded-xl overflow-hidden shadow hover:shadow-md transition-transform duration-200"
+        >
+          <div class="relative h-56 overflow-hidden">
+            <img
+              [src]="item.image"
+              [alt]="item.name"
+              class="w-full h-full object-cover"
+            />
+            <div
+              *ngIf="item.popular"
+              class="absolute top-3 right-3 bg-amber-500 text-white text-[0.65rem] tracking-wide font-medium px-2.5 py-1 rounded-full uppercase shadow-sm"
+            >
+              Popular
+            </div>
           </div>
 
-          <p class="text-gray-500 text-sm mb-6 h-10 line-clamp-2">
-            {{ item.description }}
-          </p>
-
-          <button
-            class="w-full bg-amber-500 text-white py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-amber-600"
-            (click)="addToCart()"
-          >
-            <lucide-icon [name]="Plus" class="h-4 w-4" />
-            Add to Order
-          </button>
+          <div class="p-5 space-y-2.5">
+            <div class="flex justify-between items-start">
+              <h3 class="text-lg font-semibold text-gray-900">{{ item.name }}</h3>
+              <span class="text-base font-medium text-amber-600">₱{{ item.price }}</span>
+            </div>
+            <p class="text-gray-600 text-sm line-clamp-2">{{ item.description }}</p>
+            <button
+              class="w-full bg-amber-600 text-white py-2.5 rounded-md flex items-center justify-center gap-2 hover:bg-gray-800 transition-colors duration-200 text-sm font-medium"
+              (click)="addToCart()"
+            >
+              <lucide-icon [name]="Plus" class="h-4 w-4" />
+              Add to order
+            </button>
+          </div>
         </div>
       </div>
-
-    </div>
+    </main>
   </div>
 
   <!-- FLOATING CART (MOBILE) -->
   <div class="fixed bottom-6 right-6 z-40 md:hidden">
     <button
-      class="bg-red-600 text-white p-4 rounded-full shadow-2xl flex items-center gap-2 hover:scale-105 transition"
+      class="bg-gray-900 text-white px-4 py-3 rounded-full shadow-lg flex items-center gap-2 hover:bg-gray-800 transition-colors duration-200 text-sm"
     >
-      <lucide-icon [name]="ShoppingCart" class="h-6 w-6" />
-      <span class="font-bold">{{ cartCount }}</span>
+      <lucide-icon [name]="ShoppingCart" class="h-5 w-5" />
+      <span class="font-medium">{{ cartCount }}</span>
     </button>
   </div>
-
 </div>

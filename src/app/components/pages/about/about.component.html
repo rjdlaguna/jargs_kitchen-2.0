@@ -2,148 +2,147 @@
 
   <!-- HERO SECTION -->
   <div class="relative h-[60vh] min-h-[400px] w-full overflow-hidden">
-    <div class="absolute inset-0 bg-black/50 z-10"></div>
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black/60 z-10"></div>
 
+    <!-- Background Image -->
     <img
-      src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=1920&q=80"
-      class="w-full h-full object-cover"
+      src="/images/jargs-kitchen-2.jpg"
+      alt="Jarg's Kitchen interior"
+      class="absolute inset-0 w-full h-full object-cover"
     />
 
-    <div class="absolute inset-0 z-20 flex flex-col items-center justify-center">
-      <div
-        class="bg-[#5c2e14] px-12 py-4 rounded-full shadow-2xl transform -rotate-2 border-4 border-[#8b4513]"
-      >
-        <h1
-          class="text-4xl md:text-6xl font-black font-serif text-white uppercase tracking-wide"
-        >
-          Jarg's Kitchen Story
+    <!-- Hero Content -->
+    <div class="relative z-20 flex items-center justify-center h-full text-center text-white px-6">
+      <div class="max-w-4xl space-y-4">
+        <h1 class="text-4xl md:text-6xl font-bold leading-tight">
+          The Jarg’s Kitchen Story
         </h1>
-      </div>
-
-      <!-- Floating Burger -->
-      <div class="absolute -bottom-32 md:-bottom-48 z-30 w-64 md:w-96 animate-float">
-        <img
-          src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&q=80"
-          class="w-full drop-shadow-2xl"
-        />
+        <p class="text-lg md:text-xl text-white/90 max-w-xl mx-auto">
+          Where bold flavors meet homemade heart.
+        </p>
       </div>
     </div>
   </div>
 
   <!-- STORY SECTION -->
-  <div class="pt-40 pb-20 px-4 md:px-8 max-w-7xl mx-auto">
+  <section class="pt-24 pb-20 px-4 md:px-8 max-w-7xl mx-auto">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
       <!-- CHEF IMAGE -->
-      <div class="relative rounded-[2rem] overflow-hidden shadow-2xl h-[600px] group">
+      <figure class="relative rounded-2xl overflow-hidden shadow-xl h-[500px] md:h-[600px] group">
         <img
-          src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?w=800&q=80"
-          class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          src="/images/jarg-kitchen-shop.jpg"
+          alt="Jarg's Kitchen storefront"
+          class="w-full h-full object-cover object-top"
         />
         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-        <div class="absolute bottom-8 left-8 text-white">
-          <p class="font-serif text-2xl font-bold">Chef Jarg</p>
-          <p class="text-amber-400">Founder & Head Chef</p>
-        </div>
-      </div>
+      </figure>
 
       <!-- STORY TEXT -->
-      <div class="space-y-6 text-center md:text-left">
-        <p class="text-lg md:text-xl text-gray-700 font-medium">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua.
+      <article class="space-y-6 text-center md:text-left">
+        <h2 class="text-3xl md:text-4xl font-semibold text-gray-900">
+          Our Story
+        </h2>
+        <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+          Jarg’s Kitchen is a local small business in Mabalacat City, Pampanga. 
+          We serve burgers, chicken, and other flavorful dishes at affordable prices. 
+          Founded by Cheyanby Nygel A. Guiao and co‑founder Renato S. Guiao, 
+          the business began with a mission to offer robust flavors and homemade products 
+          like atchara and chili garlic oil.
         </p>
-
-        <p class="text-lg md:text-xl text-gray-700 font-medium">
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-          dolore eu fugiat nulla pariatur.
+        <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+          Located in a densely populated area, Jarg’s Kitchen attracts a wide range of 
+          customers—from students to working adults and seniors—creating a space where 
+          every bite feels like a home‑cooked meal.
         </p>
-
-        <p class="text-lg md:text-xl text-gray-700 font-medium">
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem.
-        </p>
-
-        <div class="pt-6">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Signature_sample.svg"
-            class="h-16 opacity-60 mx-auto md:mx-0"
-          />
-        </div>
-      </div>
-
+      </article>
     </div>
-  </div>
+  </section>
 
-  <!-- FEATURES -->
-  <div class="bg-black py-20">
-    <div class="max-w-7xl mx-auto px-4">
-      <h2
-        class="text-3xl md:text-5xl font-black font-serif text-white text-center mb-16 uppercase"
-      >
-        What Makes Jarg's Kitchen Different?
+  <!-- FEATURES SECTION -->
+  <div class="bg-neutral-100 py-20">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+      <h2 class="text-3xl md:text-5xl font-bold text-center mb-12 text-gray-900">
+        What Makes Jarg’s Kitchen Different?
       </h2>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
 
         <!-- FEATURE CARDS -->
         <div class="space-y-6">
-          <div
-            *ngFor="let f of features"
-            class="bg-white rounded-2xl p-6 shadow-lg hover:scale-105 transition"
-          >
-            <h3 class="text-xl font-black mb-2 uppercase">
-              Ultra-Fresh Ingredients
+          <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">
+              Fresh, Local Ingredients
             </h3>
-            <p class="text-gray-600 text-sm">
-              Sourced daily from local farms – smashed patties, bold flavors,
-              zero shortcuts.
+            <p class="text-gray-600 text-sm leading-relaxed">
+              We source fresh meat, produce, and spices from nearby farms and markets, 
+              ensuring every burger and dish is flavorful and made with care.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">
+              Homemade Signature Touches
+            </h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              From our house‑made atchara to our chili garlic oil, every condiment is 
+              crafted in‑house to give our meals that unique Jarg’s Kitchen flavor.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">
+              Affordable Comfort Food
+            </h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              We believe great food shouldn’t break the bank. Our menu is designed to 
+              be delicious, filling, and easy on the wallet for students, workers, and families.
             </p>
           </div>
         </div>
 
         <!-- IMAGE -->
-        <div class="min-h-[400px]">
+        <div class="min-h-[400px] rounded-2xl overflow-hidden shadow-2xl border border-gray-200">
           <img
-            src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&q=80"
-            class="w-full h-full object-cover rounded-2xl shadow-2xl border-4 border-gray-800"
+            src="/images/jargs-kitchen-3.jpg"
+            alt="Fresh ingredients"
+            class="w-full h-full object-cover"
           />
         </div>
-
       </div>
     </div>
   </div>
 
-  <!-- PRODUCT SHOWCASE -->
-  <div class="py-24 bg-neutral-100">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+  <!-- THIRD SECTION – Our Promise -->
+  <section class="pt-24 pb-20 px-4 md:px-8 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
-        <div
-          *ngFor="let burger of burgers"
-          class="bg-gray-200 rounded-3xl p-8 text-center hover:bg-white hover:shadow-xl transition group"
-        >
-          <div class="w-48 h-48 mx-auto mb-6">
-            <img
-              [src]="burger.img"
-              [alt]="burger.name"
-              class="w-full h-full object-contain drop-shadow-xl group-hover:scale-110 transition"
-            />
-          </div>
+      <!-- IMAGE -->
+      <figure class="relative rounded-2xl overflow-hidden shadow-xl h-[500px] md:h-[600px] group">
+        <img
+          src="/images/jargs-kitchen-1.jpg"
+          alt="Jarg's Kitchen team and customers"
+          class="w-full h-full object-cover object-center"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+      </figure>
 
-          <h3 class="text-2xl font-bold mb-4">
-            {{ burger.name }}
-          </h3>
-
-          <button
-            class="w-full bg-[#8b4513] text-white py-3 rounded-lg hover:bg-[#5c2e14]"
-            (click)="navigate('order')"
-          >
-            Add to Cart
-          </button>
-        </div>
-
-      </div>
+      <!-- TEXT -->
+      <article class="space-y-6 text-center md:text-left">
+        <h2 class="text-3xl md:text-4xl font-semibold text-gray-900">
+          Our Promise to You
+        </h2>
+        <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+          At Jarg’s Kitchen, we don’t just serve food—we serve comfort, consistency, and community. 
+          Every order is prepared with the same care we’d give our own family.
+        </p>
+        <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+          Whether you’re grabbing a quick bite after class, a late‑night snack, or a meal with loved ones, 
+          we want you to leave satisfied, full, and already planning your next visit.
+        </p>
+      </article>
     </div>
-  </div>
+  </section>
 
 </div>
